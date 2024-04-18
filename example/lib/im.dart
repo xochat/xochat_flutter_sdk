@@ -15,7 +15,6 @@ class IMUtils {
     bool result = await XOIM.shared.setup(Options.newDefault(
       UserInfo.uid,
       UserInfo.token,
-      addr: "13.201.220.225:15100",
     ));
     XOIM.shared.options.getAddr = (Function(String address) complete) async {
       String ip = await HttpUtils.getIP();

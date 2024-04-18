@@ -34,7 +34,8 @@ class HttpUtils {
   static Future<String> getIP() async {
     final dio = Dio();
     String ip = '';
-    final response = await dio.get('$apiURL/route');
+    final response =
+        await dio.get('$apiURL/users/${XOIM.shared.options.uid ?? ""}/im');
     if (response.statusCode == HttpStatus.ok) {
       ip = response.data['tcp_addr'];
     }

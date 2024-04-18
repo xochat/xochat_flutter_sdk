@@ -182,7 +182,7 @@ class XOConnectionManager {
       XOIM.shared.options.getAddr!((String addr) {
         _socketConnect(addr, socketType);
       });
-      _socketConnect(addr!, socketType);
+      // _socketConnect(addr!, socketType);
     } else {
       _socketConnect(addr!, socketType);
     }
